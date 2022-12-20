@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import numpy as np
 from async_util import Async
+import os
 
 
 class Buffer(object):
@@ -25,5 +26,6 @@ class Buffer(object):
 
 
 if __name__ == '__main__':
+    os.chdir(os.path.join(os.path.split(os.path.realpath(__file__))[0]))
     B = Buffer('./out2.log')
     B.Print()
